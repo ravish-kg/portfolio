@@ -59,3 +59,24 @@ code {
 .pointer {
   cursor: pointer;
 }
+
+.alignToCenter {
+  margin: auto;
+  margin-top: 100px;
+  width: 40%;
+}
+
+.cardBoxShadow {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 24px;
+  border-radius: 5px;
+}
+
+.displayFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.noLinkStyle {
+  text-decoration: none;
+}

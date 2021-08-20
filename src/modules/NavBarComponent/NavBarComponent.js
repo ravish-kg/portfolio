@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { NavBarContentText } from '../../commons/Text';
+import { logout } from '../Utility';
 
 class NavBarComponent extends Component {
 
@@ -8,6 +10,18 @@ class NavBarComponent extends Component {
         this.state = {
 
         }
+    }
+
+    getUserDetails = () => {
+        if (localStorage.getItem('email')) {
+            return true;
+        }
+
+        return false;
+    }
+
+    getUserEmail = () => {
+        return localStorage.getItem('email');
     }
 
     render() {
@@ -19,23 +33,27 @@ class NavBarComponent extends Component {
                         <Navbar.Brand href="#home">Verify Code</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
-                            {/* <Nav className="me-auto">
-                                <Nav.Link href="#features">Features</Nav.Link>
-                                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav> */}
-                            <Nav className="me-auto-left">
-                                <Nav.Link href="#deets">Login</Nav.Link>
-                                <Nav.Link eventKey={2} href="#memes">
-                                    Create Account
-                                </Nav.Link>
-                            </Nav>
+                            {!this.getUserDetails() ? (
+                                <Nav className="me-auto-left">
+                                    <Nav.Link href="/login">Login</Nav.Link>
+                                    <Nav.Link eventKey={2} href="/createAccount">
+                                        Create Account
+                                    </Nav.Link>
+                                </Nav>) : (
+                                <Nav className="me-auto-left">
+                                    {/* <NavBarContentText label={`Welcome ${this.getUserEmail()}`} />
+                                    <Button variant="link" className="noLinkStyle" onClick={logout}>
+                                        Logout
+                                    </Button> */}
+                                    <NavDropdown
+                                        id="nav-dropdown-dark-example"
+                                        title={`Welcome ${this.getUserEmail()}`}
+                                        menuVariant="dark"
+                                    >
+                                        <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+                                    </NavDropdown>
+                                </Nav>
+                            )}
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

@@ -56,3 +56,22 @@ export class ContentText extends Component {
         );
     }
 }
+
+export class NavBarContentText extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
+
+    render() {
+
+        const { label } = this.props;
+
+        return (
+            <h6 style={{ margin: '0px', color: 'white' }}>{label}</h6>
+        );
+    }
+}
