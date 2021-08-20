@@ -55,3 +55,7 @@ code {
 .badgeMargin {
   margin: 4px
 }
+
+.pointer {
+  cursor: pointer;
+}

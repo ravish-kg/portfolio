@@ -17,7 +17,7 @@ class CategoriesList extends Component {
         return (
             <>
                 <ListGroup as="ul">
-                    {data.response.map(each => (<ListGroup.Item as="li" action>
+                    {data.response.map(each => (<ListGroup.Item as="li" className="pointer" action>
                         {each.label}
                         <Badge className="badgeRight" bg="secondary">{each.postCount}</Badge>
                     </ListGroup.Item>))}

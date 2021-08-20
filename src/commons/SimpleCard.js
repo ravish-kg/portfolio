@@ -4,13 +4,6 @@ import { Heart } from 'react-bootstrap-icons';
 
 class SimpleCard extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-
     render() {
         const { title, content, likes, date, tags, readMore } = this.props;
 
@@ -32,7 +25,7 @@ class SimpleCard extends Component {
                         </div>
                         <hr />
                         <div className="flex spaceBw">
-                            <div className='marginAuto0'>{likes} <Heart /></div>
+                            <div className='marginAuto0 pointer'>{likes} <Heart /></div>
                             <Button variant="light" className="floatRight" onClick={readMore} >Read More</Button>
                         </div>
                     </Card.Body>
