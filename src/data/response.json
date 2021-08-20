@@ -1,0 +1,44 @@
+{
+    "result": [
+        {
+            "createdOn": "Aug 13",
+            "updatedOn": "Aug 13",
+            "title": "Divide And Conquer",
+            "content": "This is a post to show an example of divide and conquer",
+            "likes": 5,
+            "tags": ["Algorithms", "data structure"]
+        },
+        {
+            "createdOn": "Aug 11",
+            "updatedOn": "Aug 11",
+            "title": "Greedy Algorithm",
+            "content": "This is a post to show an example of Greedy Algorithm",
+            "likes": 5,
+            "tags": ["Algorithms", "data structure"]
+        },
+        {
+            "createdOn": "Aug 16",
+            "updatedOn": "Aug 13",
+            "title": "Graphs",
+            "content": "This is a post to show an example of Graphs",
+            "likes": 5,
+            "tags": ["Algorithms", "data structure"]
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "title": "Dynamic programming",
+            "content": "This is a post to show an example of divide and conquer",
+            "likes": 19,
+            "tags": ["Algorithms", "data structure"]
+        },
+        {
+            "createdOn": "Aug 19",
+            "updatedOn": "Aug 13",
+            "title": "Graphs",
+            "content": "This is a post to show an example of divide and conquer",
+            "likes": 17,
+            "tags": ["Algorithms", "data structure"]
+        }
+    ]
+}
