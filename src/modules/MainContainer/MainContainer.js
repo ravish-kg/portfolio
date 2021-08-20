@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import AlertComponent from '../AlertComponent/AlertComponent';
 import CategoryContainer from '../CategoryContainer/CategoryContainer';
 import PostsContainer from '../PostsContainer/PostsContainer';
 
@@ -23,6 +24,7 @@ class MainContainer extends Component {
                 <Container>
                     <Row>
                         {/* <Col><SearchContainer /></Col> */}
+                        <AlertComponent />
                         <Col><CategoryContainer /></Col>
                         <Col xs={12} md={8} lg={9}>
                             <SearchContainer />
