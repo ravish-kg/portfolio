@@ -4,13 +4,13 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 class Editor extends Component {
     render() {
-        const { editMode } = this.props;
+        const { editMode, content } = this.props;
 
         return (
             <div className="App">
                 <CKEditor
                     editor={ ClassicEditor }
-                    data="<p>Hello from CKEditor 5!</p>"
+                    data={content}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );

@@ -18,7 +18,7 @@ class ReadMore extends Component {
     }
 
     render() {
-        const { show, onHide } = this.props;
+        const { show, onHide, data } = this.props;
         const { edit } = this.state;
 
         return (
@@ -32,7 +32,7 @@ class ReadMore extends Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
-                            Algorithms and Data Structure
+                            {data.title}
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -40,7 +40,7 @@ class ReadMore extends Component {
                             <Form.Check
                                 type="switch"
                                 id="custom-switch"
-                                label="Go to Edit Mode"
+                                label="Edit Mode"
                                 onChange={this.editMode}
                                 value={edit}
                             />
@@ -48,6 +48,7 @@ class ReadMore extends Component {
                         <br />
                         <Editor 
                             editMode={edit}
+                            content={data.content}
                         />
                     </Modal.Body>
                 </Modal>

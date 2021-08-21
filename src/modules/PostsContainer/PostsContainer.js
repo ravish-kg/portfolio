@@ -5,6 +5,8 @@ import Posts from '../Posts/Posts';
 import CustomModal from '../../commons/CustomModal';
 import Editor from '../Editor/Editor';
 
+import data from '../../data/response.json';
+
 class FilterPost extends Component {
 
     constructor(props) {
@@ -53,16 +55,16 @@ class FilterPost extends Component {
                     className="mb-3"
                 >
                     <Tab eventKey="latest" title="Latest">
-                        <Posts />
+                        <Posts posts={data.result} />
                     </Tab>
                     <Tab eventKey="week" title="Week">
-                        <Posts />
+                        <Posts posts={data.result} />
                     </Tab>
                     <Tab eventKey="month" title="Month">
-                        <Posts />
+                        <Posts posts={data.result} />
                     </Tab>
                     <Tab eventKey="year" title="Year">
-                        <Posts />
+                        <Posts posts={data.result} />
                     </Tab>
                 </Tabs>
 

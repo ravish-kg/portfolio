@@ -26,7 +26,7 @@ class SimpleCard extends Component {
                         <hr />
                         <div className="flex spaceBw">
                             <div className='marginAuto0 pointer'>{likes} <Heart /></div>
-                            <Button variant="light" className="floatRight" onClick={readMore} >Read More</Button>
+                            <Button variant="light" className="floatRight" onClick={() => readMore({title, content})} >Read More</Button>
                         </div>
                     </Card.Body>
                 </Card>

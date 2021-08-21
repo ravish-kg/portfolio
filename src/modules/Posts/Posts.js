@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import SimpleCard from '../../commons/SimpleCard';
 import ReadMore from '../ReadMore/ReadMore';
 
-// Data
-import data from '../../data/response.json';
-
 class Posts extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            data: {}
         }
     }
 
-    readMore = () => {
+    readMore = (data) => {
         this.setState({
-            show: true
+            show: true,
+            data
         });
     }
 
@@ -26,13 +25,18 @@ class Posts extends Component {
         });
     }
 
+    onClick = (post) => {
+        console.log(post);
+    }
+
     render() {
-        const { show } = this.state;
+        const { posts } = this.props;
+        const { show, data } = this.state;
 
         return (
             <>
                 {
-                    data.result.map(each => (
+                    posts.map(each => (
                         <div className="marginTopBottom">
                             <SimpleCard 
                                 title={each.title} 
@@ -45,7 +49,7 @@ class Posts extends Component {
                         </div>
                     ))
                 }
-                <ReadMore show={show} onHide={this.onHide} />
+                <ReadMore show={show} onHide={this.onHide} data={data} />
             </>
         );
     }
