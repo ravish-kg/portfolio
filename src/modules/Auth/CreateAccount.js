@@ -23,7 +23,7 @@ class CreateAccount extends Component {
     }
 
     handleSubmit = (event) => {
-        const form = event.target;
+        // const form = event.target;
 
         console.log(this.state);
         this.props.history.replace('/');

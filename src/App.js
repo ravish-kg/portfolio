@@ -7,7 +7,7 @@ import CreateAccount from './modules/Auth/CreateAccount';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/portfolio'>
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/createAccount" component={CreateAccount} />

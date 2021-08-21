@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SimpleCard from '../../commons/SimpleCard';
-
-import CustomModal from '../../commons/CustomModal';
+import ReadMore from '../ReadMore/ReadMore';
 
 // Data
 import data from '../../data/response.json';
@@ -46,7 +45,7 @@ class Posts extends Component {
                         </div>
                     ))
                 }
-                <CustomModal show={show} onHide={this.onHide} />
+                <ReadMore show={show} onHide={this.onHide} />
             </>
         );
     }

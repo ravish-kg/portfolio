@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, Button } from 'react-bootstrap';
 import { SubHeadingText } from '../../commons/Text';
 import Posts from '../Posts/Posts';
+import CustomModal from '../../commons/CustomModal';
+import Editor from '../Editor/Editor';
 
 class FilterPost extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            key: 'latest'
+            key: 'latest',
+            open: false
         }
     }
 
@@ -18,12 +21,30 @@ class FilterPost extends Component {
         });
     }
 
+    openEditor = () => {
+        this.setState({
+            open: true
+        });
+    }
+
+    closeEditor = () => {
+        this.setState({
+            open: false
+        })
+    }
+
     render() {
-        const { key } = this.state;
+        const { key, open } = this.state;
 
         return (
             <div className="padding8">
-                <SubHeadingText label="Posts" />
+                <div className="displayFlex">
+                    <SubHeadingText label="Posts" />
+                    <Button variant="primary" onClick={this.openEditor}>
+                        Write a post
+                    </Button>
+                </div>
+
 
                 <Tabs
                     id="controlled-tab-example"
@@ -44,6 +65,8 @@ class FilterPost extends Component {
                         <Posts />
                     </Tab>
                 </Tabs>
+
+                <CustomModal show={open} onHide={this.closeEditor} title="Write a post" container={<Editor editMode />} />
             </div>
         );
     }

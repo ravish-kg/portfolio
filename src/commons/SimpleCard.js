@@ -12,7 +12,7 @@ class SimpleCard extends Component {
                 <Card>
                     {/* <Card.Header as="h5">Algorithms</Card.Header> */}
                     <Card.Body>
-                        <Card.Subtitle><h6>{title}</h6><p style={{ fontSize: '12px' }}>{date}</p></Card.Subtitle>
+                        <Card.Subtitle><h6>{title}</h6><p className="dateFont">{date}</p></Card.Subtitle>
                         <Card.Text>
                             {content}
                         </Card.Text>

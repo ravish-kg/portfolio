@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavBarContentText } from '../../commons/Text';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { logout } from '../Utility';
 
 class NavBarComponent extends Component {
@@ -35,16 +35,12 @@ class NavBarComponent extends Component {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             {!this.getUserDetails() ? (
                                 <Nav className="me-auto-left">
-                                    <Nav.Link href="/login">Login</Nav.Link>
-                                    <Nav.Link eventKey={2} href="/createAccount">
-                                        Create Account
+                                    <Nav.Link><Link to="/login" className="noLinkStyle white">Login</Link></Nav.Link>
+                                    <Nav.Link eventKey={2}> 
+                                        <Link to="/createAccount" className="noLinkStyle white">Create Account</Link>
                                     </Nav.Link>
                                 </Nav>) : (
                                 <Nav className="me-auto-left">
-                                    {/* <NavBarContentText label={`Welcome ${this.getUserEmail()}`} />
-                                    <Button variant="link" className="noLinkStyle" onClick={logout}>
-                                        Logout
-                                    </Button> */}
                                     <NavDropdown
                                         id="nav-dropdown-dark-example"
                                         title={`Welcome ${this.getUserEmail()}`}

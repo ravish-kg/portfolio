@@ -16,7 +16,7 @@ class AlertComponent extends Component {
                 </p>
                 <hr />
                 <p className="mb-0">
-                    I am trying to make a new website for this <Alert.Link href="https://codetrays.blogspot.in">blog</Alert.Link>
+                    I am trying to make a new website for my old <Alert.Link href="https://codetrays.blogspot.in">blog</Alert.Link>
                 </p>
             </Alert>
         );

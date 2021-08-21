@@ -80,3 +80,13 @@ code {
 .noLinkStyle {
   text-decoration: none;
 }
+
+.white {
+  color: white;
+}
+
+.dateFont {
+  font-size: 12px;
+  font-style: italic;
+  color: grey;
+}
