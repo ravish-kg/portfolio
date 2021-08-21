@@ -37,16 +37,16 @@ class FilterPost extends Component {
 
     render() {
         const { key, open } = this.state;
+        const { category } = this.props;
 
         return (
             <div className="padding8">
                 <div className="displayFlex">
-                    <SubHeadingText label="Posts" />
+                    <SubHeadingText label={`Posts / ${category}`} />
                     <Button variant="primary" onClick={this.openEditor}>
                         Write a post
                     </Button>
                 </div>
-
 
                 <Tabs
                     id="controlled-tab-example"

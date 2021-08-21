@@ -13,11 +13,18 @@ class MainContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            category: 'Algorithms'
         }
     }
 
+    onChangeOfCategory = (category) => (event) => {
+        this.setState({
+            category
+        })
+    }
+
     render() {
+        const { category } = this.state; 
 
         return (
             <>
@@ -25,10 +32,10 @@ class MainContainer extends Component {
                     <Row>
                         {/* <Col><SearchContainer /></Col> */}
                         <AlertComponent />
-                        <Col><CategoryContainer /></Col>
+                        <Col><CategoryContainer onChange={this.onChangeOfCategory} /></Col>
                         <Col xs={12} md={8} lg={9}>
                             <SearchContainer />
-                            <PostsContainer />
+                            <PostsContainer category={category} />
                         </Col>
                     </Row>
                 </Container>

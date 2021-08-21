@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Modal } from 'react-bootstrap';
+import { Button, Form, Modal } from 'react-bootstrap';
 import Editor from '../Editor/Editor';
 
 class ReadMore extends Component {
@@ -7,7 +7,7 @@ class ReadMore extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            edit: false
         }
     }
 
@@ -42,14 +42,20 @@ class ReadMore extends Component {
                                 id="custom-switch"
                                 label="Edit Mode"
                                 onChange={this.editMode}
-                                value={edit}
+                                checked={edit}
                             />
                         </Form>
                         <br />
-                        <Editor 
+                        <Editor
                             editMode={edit}
                             content={data.content}
                         />
+                        {edit && (<>
+                            <hr />
+                            <Button variant="primary">
+                                Save
+                            </Button></>
+                        )}
                     </Modal.Body>
                 </Modal>
             </>
