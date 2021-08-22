@@ -3,42 +3,122 @@
         {
             "createdOn": "Aug 13",
             "updatedOn": "Aug 13",
+            "id": "algorithms",
             "title": "Divide And Conquer",
             "content": "This is a post to show an example of divide and conquer",
-            "likes": 5,
-            "tags": ["Algorithms", "data structure"]
+            "likes": 6,
+            "tags": ["Algorithms", "data structure"],
+            "category": "algorithms"
         },
         {
             "createdOn": "Aug 11",
             "updatedOn": "Aug 11",
+            "id": "algorithms",
             "title": "Greedy Algorithm",
             "content": "This is a post to show an example of Greedy Algorithm",
-            "likes": 5,
-            "tags": ["Algorithms", "data structure"]
+            "likes": 10,
+            "tags": ["Algorithms", "data structure"],
+            "category": "algorithms"
         },
         {
             "createdOn": "Aug 16",
             "updatedOn": "Aug 13",
+            "id": "algorithms",
             "title": "Graphs",
             "content": "This is a post to show an example of Graphs",
             "likes": 5,
-            "tags": ["Algorithms", "data structure"]
+            "tags": ["Algorithms", "data structure"],
+            "category": "algorithms"
         },
         {
             "createdOn": "Aug 14",
             "updatedOn": "Aug 13",
+            "id": "algorithms",
             "title": "Dynamic programming",
-            "content": "This is a post to show an example of divide and conquer",
+            "content": "This is a post to show an example of dynamic programming",
             "likes": 19,
-            "tags": ["Algorithms", "data structure"]
+            "tags": ["Algorithms", "data structure"],
+            "category": "algorithms"
         },
         {
-            "createdOn": "Aug 19",
+            "createdOn": "Aug 14",
             "updatedOn": "Aug 13",
-            "title": "Graphs",
-            "content": "This is a post to show an example of divide and conquer",
-            "likes": 17,
-            "tags": ["Algorithms", "data structure"]
+            "id": "datastructure",
+            "title": "Stacks",
+            "content": "This is a post to show an example of Stacks",
+            "likes": 19,
+            "tags": ["data structure"],
+            "category": "datastructure"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "OS",
+            "title": "Operating Systems",
+            "content": "This is a post to show an example of Operating Systems",
+            "likes": 19,
+            "tags": ["OS"],
+            "category": "OS"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "OS",
+            "title": "Round Robin Algorithm",
+            "content": "This is a post to show an example of Multithreading",
+            "likes": 19,
+            "tags": ["OS", "algorithms"],
+            "category": "OS"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "Java",
+            "title": "Java",
+            "content": "This is a post to show an example of Java",
+            "likes": 19,
+            "tags": ["Java", "Object Oriented Programming"],
+            "category": "Java"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "Java",
+            "title": "Inheritance",
+            "content": "This is a post to show an example of Inheritance",
+            "likes": 19,
+            "tags": ["Java", "Object Oriented Programming"],
+            "category": "Java"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "Html",
+            "title": "Html",
+            "content": "This is a post to show an example of Html",
+            "likes": 19,
+            "tags": ["html"],
+            "category": "html"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "CSS",
+            "title": "CSS",
+            "content": "This is a post to show an example of CSS",
+            "likes": 19,
+            "tags": ["css"],
+            "category": "css"
+        },
+        {
+            "createdOn": "Aug 14",
+            "updatedOn": "Aug 13",
+            "id": "Javascript",
+            "title": "Javascript",
+            "content": "This is a post to show an example of Javascript",
+            "likes": 19,
+            "tags": ["Javascript"],
+            "category": "Javascript"
         }
     ]
 }

@@ -35,9 +35,15 @@ class FilterPost extends Component {
         })
     }
 
+    getPostData = (category) => {
+        return data.result.filter(each => each.id.toLowerCase() === category.toLowerCase());
+    }
+
     render() {
         const { key, open } = this.state;
         const { category } = this.props;
+
+        const postData = this.getPostData(category);
 
         return (
             <div className="padding8">
@@ -55,16 +61,19 @@ class FilterPost extends Component {
                     className="mb-3"
                 >
                     <Tab eventKey="latest" title="Latest">
-                        <Posts posts={data.result} />
+                        <Posts posts={postData} />
+                    </Tab>
+                    <Tab eventKey="popular" title="Popular">
+                        <Posts posts={postData} />
                     </Tab>
                     <Tab eventKey="week" title="Week">
-                        <Posts posts={data.result} />
+                        <Posts posts={postData} />
                     </Tab>
                     <Tab eventKey="month" title="Month">
-                        <Posts posts={data.result} />
+                        <Posts posts={postData} />
                     </Tab>
                     <Tab eventKey="year" title="Year">
-                        <Posts posts={data.result} />
+                        <Posts posts={postData} />
                     </Tab>
                 </Tabs>
 

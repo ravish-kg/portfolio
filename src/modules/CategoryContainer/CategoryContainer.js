@@ -12,9 +12,8 @@ class CategoryContainer extends Component {
         return(
             <div className="padding8">
                 <SubHeadingText label="Categories" />
-                {/* <CategoriesList /> */}
                 <ListGroup as="ul">
-                    {data.response.map(each => (<ListGroup.Item as="li" className="pointer" action onClick={onChange(each.label)} >
+                    {data.response.map(each => (<ListGroup.Item as="li" className="pointer" action onClick={onChange(each.id)} >
                         {each.label}
                         <Badge className="badgeRight" bg="secondary">{each.postCount}</Badge>
                     </ListGroup.Item>))}

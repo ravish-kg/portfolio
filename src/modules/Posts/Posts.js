@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SimpleCard from '../../commons/SimpleCard';
+import { ContentText } from '../../commons/Text';
 import ReadMore from '../ReadMore/ReadMore';
 
 class Posts extends Component {
@@ -48,6 +49,11 @@ class Posts extends Component {
                             />
                         </div>
                     ))
+                }
+                {
+                    posts.length === 0 && (
+                        <ContentText label="No Data Available" />
+                    )
                 }
                 <ReadMore show={show} onHide={this.onHide} data={data} />
             </>
